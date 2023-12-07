@@ -6,6 +6,7 @@ import numpy as np
 def app():
     st.title('Home')
     m = leafmap.Map()
+    m.add_basemap('ROADMAP')
 
     st.write("This is a sample home page in the mutliapp.")
     st.write("See `apps/home.py` to know how to use it.")
