@@ -6,7 +6,7 @@ import numpy as np
 def app():
     st.title('Ubicación de las cámaras del Acueducto y Relaveducto KOZAN')
     
-    in_geojson = 'https://raw.githubusercontent.com/maureliadata/CAMARAS.geojson'
+    in_geojson = 'https://github.com/maurelia/kozangis/blob/edacf98a91f516740f0e16801fc58d82c5c3b4e2/data/CAMARAS.geojson'
 
     m = leafmap.Map(center=[-27.42581110601346, -70.26855756942263], zoom=13)    
     m.add_basemap("HYBRID")
