@@ -17,6 +17,6 @@ def app():
     ).add_to(m)    
     st.markdown("### Plot Data")
     st_data = st_folium(m, width=725)
-    df = create_table()
+    #df = create_table()
 
     st.line_chart(df)
