@@ -4,3 +4,4 @@ pandas
 leafmap
 leaflet
 folium
+streamlit_folium
