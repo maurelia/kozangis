@@ -9,8 +9,7 @@ def app():
 
     st.write("This is a sample data stats in the mutliapp.")
     st.write("See `apps/data_stats.py` to know how to use it.")
-    m = leafmap.Map()
-    m
+    leafmap.Map()
     st.markdown("### Plot Data")
     df = create_table()
 
