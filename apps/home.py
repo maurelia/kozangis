@@ -6,11 +6,11 @@ import numpy as np
 def app():
     st.title('Ubicación de las cámaras del Acueducto y Relaveducto KOZAN')
     
-    in_geojson = 'https://github.com/maurelia/kozangis/blob/edacf98a91f516740f0e16801fc58d82c5c3b4e2/data/CAMARAS.geojson'
+    camaras = 'https://github.com/maurelia/kozangis/blob/edacf98a91f516740f0e16801fc58d82c5c3b4e2/data/CAMARAS.geojson'
 
     m = leafmap.Map(center=[-27.42581110601346, -70.26855756942263], zoom=13)    
     m.add_basemap("HYBRID")
-    m.add_geojson(in_geojson, layer_name="Camaras Acueductos y Relaveductos")
+    m.add_geojson(camaras, layer_name="Camaras")
     m.to_streamlit(width=700,height=500,add_layer_control=True)
     
     st.write("This is a sample home page in the mutliapp.")
