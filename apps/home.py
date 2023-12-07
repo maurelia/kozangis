@@ -27,7 +27,7 @@ def app():
 
     get_current_gps_coordinates()
 
-    camaras = 'https://github.com/maurelia/kozangis/blob/edacf98a91f516740f0e16801fc58d82c5c3b4e2/data/CAMARAS.geojson'
+    camaras = 'https://github.com/maurelia/kozangis/blob/e0794668c83123ef4e8fa5e2c60f386ba2ebf57d/data/CAMARAS.geojson'
 
     m = leafmap.Map(center=[-27.42581110601346, -70.26855756942263], zoom=13)
     m.add_basemap("HYBRID")
