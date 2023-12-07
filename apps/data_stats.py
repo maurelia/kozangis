@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
+import leafmap
 from data.create_data import create_table
 
 def app():
