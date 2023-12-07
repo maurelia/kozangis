@@ -25,7 +25,7 @@ if __name__ == "__main__":
 def app():
     st.title('Ubicación de las cámaras del Acueducto y Relaveducto KOZAN')
 
-    
+    get_current_gps_coordinates()
     camaras = 'https://github.com/maurelia/kozangis/blob/edacf98a91f516740f0e16801fc58d82c5c3b4e2/data/CAMARAS.geojson'
 
     m = leafmap.Map(center=[-27.42581110601346, -70.26855756942263], zoom=13)
