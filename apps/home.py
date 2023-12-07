@@ -6,8 +6,8 @@ import numpy as np
 def app():
     st.title('Ubicación de las cámaras del Acueducto y Relaveducto KOZAN')
     
-    m = leafmap.Map(center=[0, 0], zoom=2)    
-    m.add_basemap('ROADMAP')
+    m = leafmap.Map(center=[-27.37763794313421, -70.2559825011241], zoom=10)    
+    m.add_basemap("HYBRID")
     m.to_streamlit(width=700,height=500,add_layer_control=True)
     
     st.write("This is a sample home page in the mutliapp.")
