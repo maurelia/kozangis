@@ -19,4 +19,4 @@ def app():
     st_data = st_folium(m, width=725)
     #df = create_table()
 
-    st.line_chart(df)
+    #st.line_chart(df)
