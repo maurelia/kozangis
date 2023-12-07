@@ -21,7 +21,7 @@ if __name__ == "__main__":
     else:
         print("Unable to retrieve your GPS coordinates.")
 
-
+get_current_gps_coordinates()
 
 def app():
     st.title('Ubicación de las cámaras del Acueducto y Relaveducto KOZAN')
