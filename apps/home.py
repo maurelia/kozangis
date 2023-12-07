@@ -9,7 +9,7 @@ def app():
     camaras = 'https://github.com/maurelia/kozangis/blob/edacf98a91f516740f0e16801fc58d82c5c3b4e2/data/CAMARAS.geojson'
 
     m = leafmap.Map(center=[-27.42581110601346, -70.26855756942263], zoom=13)
-    m.LocateControl()
+    leafmap.LocateControl().add_to(m)
     m.add_basemap("HYBRID")
     m.add_geojson(camaras, layer_name="Camaras")
     m.to_streamlit(width=700,height=500,add_layer_control=True)
