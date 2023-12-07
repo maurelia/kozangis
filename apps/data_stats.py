@@ -2,6 +2,8 @@ import folium
 import streamlit as st
 import numpy as np
 import pandas as pd
+from streamlit_folium import st_folium
+
 from data.create_data import create_table
 
 def app():
