@@ -3,4 +3,3 @@ numpy
 pandas
 leafmap
 geopandas
-streamlit-leaflet
