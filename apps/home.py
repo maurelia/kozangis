@@ -8,10 +8,10 @@ def app():
     
     camaras = 'https://github.com/maurelia/kozangis/blob/edacf98a91f516740f0e16801fc58d82c5c3b4e2/data/CAMARAS.geojson'
 
-    m = leafmap.Map(center=[-27.42581110601346, -70.26855756942263], zoom=13, locatecontrol)
+    m = leafmap.Map(center=[-27.42581110601346, -70.26855756942263], zoom=13)
     m.add_basemap("HYBRID")
     m.add_geojson(camaras, layer_name="Camaras")
-    m.to_streamlit(width=700,height=500,add_layer_control=True)
+    m.to_streamlit(width=700,height=500,add_layer_control=False)
     
     st.write("This is a sample home page in the mutliapp.")
     st.write("See `apps/home.py` to know how to use it.")
