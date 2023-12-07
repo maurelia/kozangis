@@ -1,7 +1,8 @@
+import leafmap
+import streamlit-leaflet
 import streamlit as st
 import pandas as pd
 import numpy as np
-import leafmap
 
 def app():
     st.title('Home')
@@ -11,7 +12,7 @@ def app():
     st.write("See `apps/home.py` to know how to use it.")
     st.markdown("### Sample Data")
 
-    m
+    streamlit-leaflet(m)
     st.write('Navigate to `Data Stats` page to visualize the data')
 
 
