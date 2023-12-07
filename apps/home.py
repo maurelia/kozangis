@@ -1,4 +1,4 @@
-import leafmap
+import leafmap.foliumap as leafmap
 import streamlit as st
 import pandas as pd
 import numpy as np
