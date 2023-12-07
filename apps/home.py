@@ -35,9 +35,7 @@ def app():
     m.add_geojson(camaras, layer_name="Camaras")
     m.to_streamlit(width=700,height=500,add_layer_control=False)
     
-    st.write("This is a sample home page in the mutliapp.")
-    st.write("See `apps/home.py` to know how to use it.")
-    st.markdown("### Sample Data")
-    st.write('Navigate to `Data Stats` page to visualize the data')
+    st.write("Estas son las ubicaciones de las cámaras de registro del acueducto y relaveducto de Atacama Kozan")
+    st.write("La aplicación le mostrará su ubicación y si hace click en la ubicación, le mostrara los datos mas relevantes a conocer")
 
 
