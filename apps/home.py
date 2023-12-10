@@ -15,19 +15,17 @@ def app():
     latitude = loc['coords']['latitude']
     longitude = loc['coords']['longitude']
 
-    icon_data = {
-    "latitude": [37.7749],
-    "longitude": [-122.4194],
-    "icon": "crosshair",
-    "size": 100,
-    "color": [255, 0, 0],
-    "angle": 0,
-}
+    icon_html = """
+    <div style="font-size: 24px; color: red;">
+      &#128279;
+    </div>
+    """
+    icon = folium.CustomIcon(icon_image=icon_html, icon_size=(30, 30))
 
     m = leafmap.Map(center=[latitude, longitude], zoom=12, draw_control=False, measure_control=False, fullscreen_control=False, attribution_control=False)
     m.add_basemap("HYBRID")
     m.add_geojson(camaras, layer_name="Camaras",zoom_to_layer=False)
-    m.add_marker([latitude, longitude], popup=None, tooltip=None, icon=icondata, draggable=False)     
+    m.add_marker([latitude, longitude], popup=None, tooltip=None, icon=icon, draggable=False)     
     m.to_streamlit(width=600,height=700,add_layer_control=True)
     
     st.write(f"{latitude},{longitude}")
