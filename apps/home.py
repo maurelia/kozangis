@@ -21,11 +21,11 @@ if __name__ == "__main__":
     else:
         print("Unable to retrieve your GPS coordinates.")
 
-location=get_current_gps_coordinates()
 def app():
     st.title('Ubicación de las cámaras del Acueducto y Relaveducto KOZAN')
 
-    get_current_gps_coordinates()
+    location=get_current_gps_coordinates()
+
 
     camaras = 'https://github.com/maurelia/kozangis/blob/e0794668c83123ef4e8fa5e2c60f386ba2ebf57d/data/CAMARAS.geojson'
 
