@@ -16,7 +16,7 @@ def app():
     longitude = loc['coords']['longitude']
 
     kw = {"prefix": "fa", "color": "red", "icon": "location-crosshairs"}
-    icon = folium.Icon(**kw)
+    icon = leafmap.Icon(**kw)
 
     m = leafmap.Map(center=[latitude, longitude], zoom=13, draw_control=False, measure_control=False, fullscreen_control=True, attribution_control=False)
     m.add_basemap("HYBRID")
