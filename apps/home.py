@@ -17,7 +17,7 @@ def app():
     m = leafmap.Map(center=[latitude, longitude], zoom=13, draw_control=False, measure_control=False, fullscreen_control=True, attribution_control=False)
     m.add_basemap("HYBRID")
     m.add_geojson(camaras, layer_name="Camaras")
-    m.add_marker([latitude, longitude], popup=None, tooltip=None, icon=None, draggable=False)     
+    m.add_marker([latitude, longitude], popup=None, tooltip=None, icon="fa-solid fa-location-crosshairs", draggable=False)     
     m.to_streamlit(width=600,height=700,add_layer_control=True)
     
     st.write(f"{latitude},{longitude}")
