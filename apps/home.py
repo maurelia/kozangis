@@ -11,7 +11,6 @@ def get_current_gps_coordinates():
     else:
         return None
 
-if __name__ == "__main__":
     coordinates = get_current_gps_coordinates()
     if coordinates is not None:
         latitude, longitude = coordinates
