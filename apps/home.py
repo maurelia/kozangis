@@ -3,6 +3,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import geocoder
+from streamlit_js_eval import streamlit_js_eval, copy_to_clipboard, create_share_link, get_geolocation
 
 def app():
     st.title('Ubicación de las cámaras del Acueducto y Relaveducto KOZAN')
@@ -14,6 +15,9 @@ def app():
     m.add_marker(location, popup=None, tooltip=None, icon=None, draggable=False)
     m.add_geojson(camaras, layer_name="Camaras")
     m.to_streamlit(width=600,height=700,add_layer_control=True)
+    
+    loc = get_geolocation()
+    st.write(f"Your coordinates are {loc}")
     
     st.write("Estas son las ubicaciones de las cámaras de registro del acueducto y relaveducto de Atacama Kozan")
     st.write("La aplicación le mostrará su ubicación y si hace click en la ubicación, le mostrara los datos mas relevantes a conocer")
