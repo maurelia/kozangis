@@ -18,7 +18,7 @@ def app():
 
     m = leafmap.Map(center=[latitude, longitude], zoom=12, draw_control=False, measure_control=False, fullscreen_control=False, attribution_control=False)
     m.add_basemap("HYBRID")
-    m.add_markers(
+    m.add_marker(
     markers=[[latitude,longitude],
     shape='circle',
     radius=20,
