@@ -20,7 +20,7 @@ def app():
       &#128279;
     </div>
     """
-    icon = folium.CustomIcon(icon_image=icon_html, icon_size=(30, 30))
+    icon = leafmap.CustomIcon(icon_image=icon_html, icon_size=(30, 30))
 
     m = leafmap.Map(center=[latitude, longitude], zoom=12, draw_control=False, measure_control=False, fullscreen_control=False, attribution_control=False)
     m.add_basemap("HYBRID")
