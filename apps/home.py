@@ -15,17 +15,18 @@ def app():
     latitude = loc['coords']['latitude']
     longitude = loc['coords']['longitude']
 
-    icon_html = """
-    <div style="font-size: 24px; color: red;">
-      &#128279;
-    </div>
-    """
-    icon = leafmap.CustomIcon(icon_image=icon_html, icon_size=(30, 30))
 
     m = leafmap.Map(center=[latitude, longitude], zoom=12, draw_control=False, measure_control=False, fullscreen_control=False, attribution_control=False)
     m.add_basemap("HYBRID")
+    m.add_markers(
+    markers=[[latitude,longitude],
+    shape='circle',
+    radius=20,
+    color='red',
+    fill_color='#3388ff',
+    fill_opacity=0.5)
     m.add_geojson(camaras, layer_name="Camaras",zoom_to_layer=False)
-    m.add_marker([latitude, longitude], popup=None, tooltip=None, icon=icon, draggable=False)     
+    m.add_marker([latitude, longitude], popup=None, tooltip=None, icon=None, draggable=False)     
     m.to_streamlit(width=600,height=700,add_layer_control=True)
     
     st.write(f"{latitude},{longitude}")
