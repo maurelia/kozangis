@@ -6,7 +6,7 @@ app = MultiApp()
 
 # Add all your application here
 app.add_app("Cámaras del acueducto/relaveducto", home.app)
-app.add_app("Construcción Tercer Dren", data_stats.app)
+app.add_app("Construcción Tercer Dren", tercerdren.app)
 
 # The main app
 app.run()
