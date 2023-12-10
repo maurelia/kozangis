@@ -29,10 +29,10 @@ def app():
 
     camaras = 'https://github.com/maurelia/kozangis/blob/e0794668c83123ef4e8fa5e2c60f386ba2ebf57d/data/CAMARAS.geojson'
 
-    m = leafmap.Map(center=[-27.42581110601346, -70.26855756942263], zoom=13)
+    m = leafmap.Map(center=[-27.42581110601346, -70.26855756942263], zoom=13, draw_control=False, measure_control=False, fullscreen_control=True, attribution_control=True)
     m.add_basemap("HYBRID")
     m.add_geojson(camaras, layer_name="Camaras")
-    m.to_streamlit(width=700,height=500,add_layer_control=True, draw_control=False, measure_control=False, fullscreen_control=True, attribution_control=True)
+    m.to_streamlit(width=700,height=500,add_layer_control=True)
     
     st.write("Estas son las ubicaciones de las cámaras de registro del acueducto y relaveducto de Atacama Kozan")
     st.write("La aplicación le mostrará su ubicación y si hace click en la ubicación, le mostrara los datos mas relevantes a conocer")
