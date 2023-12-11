@@ -2,8 +2,8 @@ import leafmap.foliumap as leafmap
 import streamlit as st
 import pandas as pd
 import numpy as np
-import geocoder
-from streamlit_js_eval import streamlit_js_eval, copy_to_clipboard, create_share_link, get_geolocation
+from streamlit_js_eval import get_geolocation
+import folium
 
 def app():
     st.title('Ubicación de las cámaras del Acueducto y Relaveducto KOZAN')
