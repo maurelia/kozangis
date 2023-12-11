@@ -19,7 +19,7 @@ def app():
     m = leafmap.Map(center=[latitude, longitude], zoom=18, draw_control=False, measure_control=False, fullscreen_control=False, attribution_control=False)
     m.add_basemap("HYBRID")
     m.add_geojson(camaras, layer_name="Camaras",zoom_to_layer=False)
-    m.add_marker([latitude, longitude], popup=None, tooltip=None, icon=None, draggable=False,zoom_to_layer=True, color='red')     
+    m.add_marker([latitude, longitude], popup=None, tooltip=None, icon=folium.Icon(color="red", icon="", prefix='fa'), draggable=False,zoom_to_layer=True)     
     m.to_streamlit(width=600,height=700,add_layer_control=True)
     
     st.write(f"{latitude},{longitude}")
