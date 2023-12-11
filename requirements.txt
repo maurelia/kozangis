@@ -5,3 +5,4 @@ leafmap
 geopandas
 geocoder
 streamlit_js_eval
+folium
