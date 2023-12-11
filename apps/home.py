@@ -23,6 +23,7 @@ def app():
     m.to_streamlit(width=600,height=700,add_layer_control=True)
     
     st.write(f"{latitude},{longitude}")
+    st.write(f"{loc}")
 
 
     st.write("Estas son las ubicaciones de las cámaras de registro del acueducto y relaveducto de Atacama Kozan")
